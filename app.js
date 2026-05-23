@@ -17,6 +17,9 @@ var HOST_APP = process.env.APP_HOST;
 var app = express();
 
 var indexRouter = require("./src/routes/index");
+var empresasRouter = require("./src/routes/empresas");
+var usuariosRouter = require("./src/routes/usuarios");
+var leiturasRouter = require("./src/routes/leituras");
 var bobiaRouter = require("./src/routes/bobia");
 
 app.use(express.json());
@@ -26,6 +29,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(cors());
 
 app.use("/", indexRouter);
+app.use("/empresas", empresasRouter);
+app.use("/usuarios", usuariosRouter);
+app.use("/leituras", leiturasRouter);
 app.use("/bobia", bobiaRouter);
 
 app.listen(PORTA_APP, function () {
