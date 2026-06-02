@@ -7,7 +7,7 @@ function buscarUm(nome) {
 }
 
 function cadastrar(nome, fkEmpresa) {
-  var instrucaoSql = `INSERT INTO entreposto (nome, fkEmpresa) VALUES ('${nome}', '${fkEmpresa}')`;
+  var instrucaoSql = `INSERT INTO entreposto (nome, fkEmpresa) VALUES ('${nome}', ${fkEmpresa})`;
 
   return database.executar(instrucaoSql);
 }
