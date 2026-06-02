@@ -20,6 +20,7 @@ var indexRouter = require("./src/routes/index");
 var usuariosRouter = require("./src/routes/usuarios");
 var empresasRouter = require("./src/routes/empresas");
 var entrepostosRouter = require("./src/routes/entrepostos");
+var enderecosRouter = require("./src/routes/enderecos");
 var leiturasRouter = require("./src/routes/leituras");
 var bobiaRouter = require("./src/routes/bobia");
 
@@ -33,6 +34,7 @@ app.use("/", indexRouter);
 app.use("/usuarios", usuariosRouter);
 app.use("/empresas", empresasRouter);
 app.use("/entrepostos", entrepostosRouter);
+app.use("/enderecos", enderecosRouter);
 app.use("/leituras", leiturasRouter);
 app.use("/bobia", bobiaRouter);
 
