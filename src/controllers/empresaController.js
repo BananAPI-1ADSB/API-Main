@@ -7,7 +7,7 @@ function cadastrar(req, res) {
   empresaModel.buscarPorCnpj(cnpj).then((resultado) => {
     if (resultado.length > 0) {
       res
-        .status(401)
+        .status(409)
         .json({ mensagem: `a empresa com o cnpj ${cnpj} já existe` });
     } else {
       empresaModel.cadastrar(nome, cnpj).then((resultado) => {
