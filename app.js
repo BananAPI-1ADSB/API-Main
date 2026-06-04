@@ -22,6 +22,7 @@ var empresasRouter = require("./src/routes/empresas");
 var entrepostosRouter = require("./src/routes/entrepostos");
 var enderecosRouter = require("./src/routes/enderecos");
 var camarasRouter = require("./src/routes/camaras");
+var sensoresRouter = require("./src/routes/sensores");
 var leiturasRouter = require("./src/routes/leituras");
 var bobiaRouter = require("./src/routes/bobia");
 
@@ -37,6 +38,7 @@ app.use("/empresas", empresasRouter);
 app.use("/entrepostos", entrepostosRouter);
 app.use("/enderecos", enderecosRouter);
 app.use("/camaras", camarasRouter);
+app.use("/sensores", sensoresRouter);
 app.use("/leituras", leiturasRouter);
 app.use("/bobia", bobiaRouter);
 
