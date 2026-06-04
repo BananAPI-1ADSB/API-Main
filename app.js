@@ -24,6 +24,7 @@ var enderecosRouter = require("./src/routes/enderecos");
 var camarasRouter = require("./src/routes/camaras");
 var sensoresRouter = require("./src/routes/sensores");
 var leiturasRouter = require("./src/routes/leituras");
+var alertasRouter = require("./src/routes/alertas");
 var bobiaRouter = require("./src/routes/bobia");
 
 app.use(express.json());
@@ -40,6 +41,7 @@ app.use("/enderecos", enderecosRouter);
 app.use("/camaras", camarasRouter);
 app.use("/sensores", sensoresRouter);
 app.use("/leituras", leiturasRouter);
+app.use("/alertas", alertasRouter);
 app.use("/bobia", bobiaRouter);
 
 app.listen(PORTA_APP, function () {
