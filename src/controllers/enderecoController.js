@@ -7,7 +7,7 @@ function cadastrar(req, res) {
   var numero = req.body.numero;
   var complemento = req.body.complemento;
   var cidade = req.body.cidade;
-  var siglaEstado = req.body.bairro;
+  var siglaEstado = req.body.siglaEstado;
   var fkEmpresa = req.body.fkEmpresa;
   var fkEntreposto = req.body.fkEntreposto;
 
