@@ -17,7 +17,7 @@ function cadastrar(
   fkEmpresa,
   fkEntreposto,
 ) {
-  var instrucaoSql = `INSERT INTO empresa VALUES (DEFAULT, '${cep}', '${rua}', '${bairro}', '${numero}', '${complemento}', '${cidade}', '${siglaEstado}', ${fkEmpresa}, ${fkEntreposto})`;
+  var instrucaoSql = `INSERT INTO endereco VALUES (DEFAULT, '${cep}', '${rua}', '${bairro}', '${numero}', '${complemento}', '${cidade}', '${siglaEstado}', ${fkEmpresa}, ${fkEntreposto})`;
 
   return database.executar(instrucaoSql);
 }
