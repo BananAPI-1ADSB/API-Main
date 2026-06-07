@@ -12,4 +12,10 @@ function cadastrar(nome, fkEmpresa) {
   return database.executar(instrucaoSql);
 }
 
-module.exports = { buscarUm, cadastrar };
+function listar(fkEmpresa) {
+  var instrucaoSql = `SELECT e.idEntreposto, e.nome FROM entreposto e WHERE e.fkEmpresa = ${fkEmpresa};`;
+
+  return database.executar(instrucaoSql);
+} 
+
+module.exports = { buscarUm, cadastrar, listar };

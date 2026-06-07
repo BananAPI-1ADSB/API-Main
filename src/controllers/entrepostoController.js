@@ -17,6 +17,15 @@ function cadastrar(req, res) {
   });
 }
 
+function listar(req, res) {
+  var fkEmpresa = req.body.fkEmpresa;
+
+  entrepostoModel.listar(fkEmpresa).then((resultado) => {
+    res.status(200).json(resultado);
+  });
+}
+
 module.exports = {
   cadastrar,
+  listar,
 };
