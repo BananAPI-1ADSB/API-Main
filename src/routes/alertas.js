@@ -3,8 +3,8 @@ var router = express.Router();
 
 var alertaController = require("../controllers/alertaController");
 
-router.get("/registrar", function (req, res) {
-  alertaController.registrar(req, res);
+router.get("/listar", function (req, res) {
+  alertaController.listar(req, res);
 });
 
 module.exports = router;

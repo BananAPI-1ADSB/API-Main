@@ -1,9 +1,9 @@
 var database = require("../database/config");
 
-function registrar(mensagem, fkLeitura) {
-  var instrucaoSql = `INSERT INTO alerta (mensagem, fkLeitura) VALUES ('${mensagem}', ${fkLeitura})`;
+function listar() {
+  var instrucaoSql = `SELECT * FROM vw_alertas LIMIT 5 ORDER BY dataHora DESC`;
 
   return database.executar(instrucaoSql);
 }
 
-module.exports = { registrar };
+module.exports = { listar };

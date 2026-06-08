@@ -1,14 +1,12 @@
 var alertaModel = require("../models/alertaModel");
 
-function registrar(req, res) {
-  var mensagem = req.body.mensagem;
-  var fkLeitura = req.body.fkLeitura;
+function listar(req, res) {
 
-  alertaModel.registrar(mensagem, fkLeitura).then((resultado) => {
-    res.status(201).json(resultado);
+  alertaModel.listar().then((resultado) => {
+    res.status(200).json(resultado);
   });
 }
 
 module.exports = {
-  registrar,
+  listar,
 };
