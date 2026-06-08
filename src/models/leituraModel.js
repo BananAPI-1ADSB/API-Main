@@ -1,7 +1,7 @@
 var database = require("../database/config");
 
 function listarPorSensor(fkSensor) {
-  var instrucaoSql = `SELECT * FROM leitura WHERE fkSensor = 1;`;
+  var instrucaoSql = `SELECT * FROM leitura WHERE fkSensor = ${fkSensor};`;
 
   return database.executar(instrucaoSql);
 }
