@@ -7,4 +7,8 @@ router.post("/cadastrar", function (req, res) {
   camaraController.cadastrar(req, res);
 });
 
+router.post("/listar", function (req, res) {
+  camaraController.listar(req, res);
+});
+
 module.exports = router;
