@@ -18,5 +18,10 @@ function cadastrar(nome, tipo, fkEntreposto) {
   return database.executar(instrucaoSql);
 }
 
-module.exports = { buscarPorNome, cadastrar, listar };
+function buscarTodas(fkEntreposto) {
+  var instrucaoSql = `SELECT * FROM vw_camara WHERE C.fk_entreposto = ${fkEntreposto}`;
 
+  return database.executar(instrucaoSql);
+}
+
+module.exports = { buscarPorNome, cadastrar, listar, buscarTodas };

@@ -3,7 +3,7 @@ var camaraModel = require("../models/camaraModel");
 function cadastrar(req, res) {
   var nome = req.body.nome;
   var tipo = req.body.tipo;
-  var fkEntreposto = req.body.fkEntreposto
+  var fkEntreposto = req.body.fkEntreposto;
 
   camaraModel.buscarPorNome(nome).then((resultado) => {
     if (resultado.length > 0) {
@@ -19,16 +19,23 @@ function cadastrar(req, res) {
 }
 
 function listar(req, res) {
-  let idEntreposto = Number(req.body.fkEntreposto)
+  let idEntreposto = Number(req.body.fkEntreposto);
 
   camaraModel.listar(idEntreposto).then((resultado) => {
     res.status(200).json(resultado);
   });
 }
 
+function buscarTodas(req, res) {
+  let idEntreposto = Number(req.body.fkEntreposto);
 
+  camaraModel.buscarTodas(idEntreposto).then((resultado) => {
+    res.status(200).json(resultado);
+  });
+}
 
 module.exports = {
   cadastrar,
   listar,
+  buscarTodas,
 };
